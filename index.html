@@ -58,6 +58,9 @@
           )
           .addTo(map);
       });
+
+      map.addControl(new mapboxgl.NavigationControl());
+      map.scrollZoom.disable();
     </script>
   </body>
 </html>
