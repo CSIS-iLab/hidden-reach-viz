@@ -42,7 +42,7 @@
 
       map.on("click", (event) => {
         const features = map.queryRenderedFeatures(event.point, {
-          layers: ["hidden-reach-1 (1)"],
+          layers: ["satellite-locations"],
         });
         if (!features.length) {
           return;
