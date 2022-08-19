@@ -35,13 +35,13 @@
       const map = new mapboxgl.Map({
         container: "map",
         style: "mapbox://styles/ilabmedia/cl70m7nqn000m14o1stnelt60",
-        center: [-64.39504, -28.864284],
-        zoom: 3.05,
+        center: [-61.39504, -23.864284],
+        zoom: 2,
         //maxBounds: bounds,
       });
 
       map.on("load", function () {
-        map.resize();
+        map.setZoom(2);
       });
 
       map.on("click", (event) => {
