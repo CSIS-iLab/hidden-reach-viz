@@ -29,15 +29,19 @@
         "pk.eyJ1IjoiaWxhYm1lZGlhIiwiYSI6ImNpbHYycXZ2bTAxajZ1c2tzdWU1b3gydnYifQ.AHxl8pPZsjsqoz95-604nw";
 
       const bounds = [
-        [-126.979976, -57.656813], // Southwest coordinates
-        [-17.861337, 22.003946], // Northeast coordinates
+        //  [-114.718862, -58.86926], // Southwest coordinates
+        //  [-18.929193, 24.376253], // Northeast coordinates
       ];
       const map = new mapboxgl.Map({
         container: "map",
-        style: "mapbox://styles/ilabmedia/cl6wg6rdy002715ou4ug6dhrq",
+        style: "mapbox://styles/ilabmedia/cl70m7nqn000m14o1stnelt60",
         center: [-64.39504, -28.864284],
-        zoom: 2,
-        //maxBounds: bounds
+        zoom: 3.05,
+        //maxBounds: bounds,
+      });
+
+      map.on("load", function () {
+        map.resize();
       });
 
       map.on("click", (event) => {
@@ -49,13 +53,12 @@
         }
         const feature = features[0];
 
-        console.log(features);
-
         const popup = new mapboxgl.Popup({ offset: [0, -15] })
           .setLngLat(feature.geometry.coordinates)
           .setHTML(
-            `<p><span style="font-weight:bold">${feature.properties.station},</span> ${feature.properties.location}</p><p>${feature.properties.description}</p>`
+            `<p><span style="font-weight:bold">${feature.properties.station}</span><br>${feature.properties.location}</p><p>${feature.properties.description}</p>`
           )
+          .setMaxWidth("250px")
           .addTo(map);
       });
 
