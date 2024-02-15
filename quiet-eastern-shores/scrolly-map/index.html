@@ -3,10 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>Zhu Hai Yun Journey</title>
-    <meta
-      name="viewport"
-      content="initial-scale=1,width=device-width"
-    />
+    <meta name="viewport" content="initial-scale=1,width=device-width" />
     <link
       rel="icon"
       type="image/x-icon"
@@ -62,7 +59,7 @@
           display: none;
         }
       }
-      #header {
+      /* #header {
         margin: auto;
         width: 100%;
         position: relative;
@@ -74,7 +71,7 @@
         margin: 0;
         padding: 2vh 2vw;
         text-align: center;
-      }
+      } */
       #footer {
         width: 100%;
         min-height: 5vh;
@@ -135,7 +132,7 @@
         text-align: center;
 
         p {
-            margin: 0;
+          margin: 0;
         }
       }
 
@@ -154,11 +151,24 @@
       }
 
       @media (max-width: 750px) {
+        #slug-style-id,
+        #first-identifier,
+        #second-identifier,
+        #third-identifier,
+        #fourth-chapter,
+        #fifth-chapter,
+        #sixth-chapter {
+          width: 80vw;
+          margin: auto;
+        }
+      }
+
+      @media (max-width: 750px) {
         .centered,
         .lefty,
         .righty,
         .fully {
-          width: 90vw;
+          width: 80vw;
           margin: 0 auto;
         }
       }
