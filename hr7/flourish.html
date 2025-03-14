@@ -1,0 +1,115 @@
+<!-- Shipyard Dots -->
+
+<!-- This is the default scrollytelling behaviour -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HR7 Dots Story</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+      .fl-scrolly-caption {
+        display: none;
+      }
+
+      p {
+        font-family: "IBM Plex Sans", sans-serif;
+        width: 780px;
+      }
+
+      .fl-scrolly-step {
+        background: rgba(34, 34, 34, 0.9) !important;
+        box-shadow: none !important;
+      }
+
+      @media (max-width: 800px) {
+        .fl-scrolly-step {
+          width: 75% !important;
+          padding: 1em !important;
+        }
+      }
+
+      a {
+        color: #fff !important;
+      }
+
+      #circle::after {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        border-radius: 50%;
+        background-color: #b5bfbf;
+        font-family: sans-serif;
+        font-size: 1.2em;
+        margin-right: 7px;
+        margin-bottom: 2px;
+        cursor: pointer;
+        vertical-align: middle;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <div id="my-wrapper">
+      <!-- 1. Drop in the normal embed code for the Flourish story -->
+      <!-- That heading is from the original instructions - all you need from your story is what's in "data-src" (`story/{ID}?{more numbers}`) and the story ID. Here it's 2125397. Replace every occurrence of that ID with the one you want to use instead. Make sure to keep 'data-height="100vh"' below.-->
+      <div
+        class="flourish-embed"
+        data-src="story/2948415?39773"
+        data-url="https://flo.uri.sh/story/2948415/embed"
+        data-height="90vh"
+      >
+        <script
+          src="https://public.flourish.studio/resources/embed.js"
+          defer
+        ></script>
+      </div>
+
+      <!-- 2. Add your captions with links to the relevant slides -->
+      <!--However many slides you have, it's just #story/{ID}/slide-{slide Number}-->
+      <p>
+        <!--For this to work, _everything_ has to be inside <a></a>. Additional text, HTML tags, styles -- it all has to be between the <a> tags.-->
+        <a href="#story/2948415/slide-1"
+          >Organizing China’s 300-plus shipyards into these four tiers helps to demystify China’s murky shipbuilding ecosystem.
+          <br>
+          <span id="circle"></span><b>1 shipyard</b>
+        </a>
+      </p>
+      <p>
+        <a href="#story/2948415/slide-2"
+          >At first glance, China’s industry appears to be dominated by privately owned Tier-4 shipyards. About 74 percent of all shipyards identified belong in Tier-4. </a
+        >
+      </p>
+      <p>
+        <a href="#story/2948415/slide-3"
+          >In reality, state-owned shipyards lead by a wide margin in output. Shipyards belonging to state-owned shipbuilding giant CSSC (Tiers 1 and 2) are especially influential. In year(s) X, they accounted for X percent of China’s total tonnage. 
+        </a>
+      </p>
+      <p>
+        <a href="#story/2948415/slide-4"
+          >At the apex of China’s system are Tier-1 shipyards—those producing both commercial vessels and PLAN warships. While only 12 of China’s 307 shipyards (4 percent) fall in this tier, they generate X percent of the country’s total output by tonnage. 
+        </a>
+      </p>
+      <p>
+        <a href="#story/2948415/slide-5"
+          >This largely because state-owned firms have the infrastructure and capacity to produce much larger vessels. On average, hulls built by state-owned firms are twice as large as those built at private yards. 
+        </a>
+      </p>
+    </div>
+    <script
+      src="https://cdn.flourish.rocks/flourish-scrolly-v3.min.js"
+      type="text/javascript"
+    ></script>
+
+    <script type="text/javascript">
+      initFlourishScrolly();
+    </script>  </body>
+</html>
